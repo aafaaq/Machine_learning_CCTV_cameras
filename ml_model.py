@@ -6,8 +6,10 @@ import torchvision.transforms as T
 from PIL import Image, ImageDraw, ImageFont
 import PIL
 
-print("loading model")
-model = torch.load("detr_model.pth")
+print("Note : Its recommended that you copy paste the model where the main.py is and simply write detr_model.pth down below.")
+model_path = input("Enter the model path : ")
+model = torch.load(model_path)
+print("Loading model")
 
 
 def rescale_frame(frame, percent=75):
